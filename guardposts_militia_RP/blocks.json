@@ -1,0 +1,11 @@
+{
+  "format_version": "1.21.0",
+  "projectmoat:guardpost": {
+    "textures": "guardpost",
+    "sound": "stone"
+  },
+  "projectmoat:archerpost": {
+    "textures": "archerpost",
+    "sound": "wood"
+  }
+}

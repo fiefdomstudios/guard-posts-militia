@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "projectmoat:guardpost",
+      "menu_category": {
+        "category": "construction"
+      }
+    },
+    "components": {
+      "minecraft:friction": 0.6,
+      "minecraft:loot": "loot_tables/blocks/guardpost_loot.json",
+      "minecraft:map_color": "#FFFFFF",
+      "minecraft:material_instances": {
+        "*": {
+          "render_method": "alpha_test"
+        }
+      }
+    }
+  }
+}

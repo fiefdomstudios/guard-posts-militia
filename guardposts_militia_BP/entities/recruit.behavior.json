@@ -1,0 +1,236 @@
+{
+  "format_version": "1.19.4",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "projectmoat:recruit",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "projectmoat:is_recruit": {
+        "minecraft:equipment": {
+          "table": "loot_tables/entities/recruit_gear.json"
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["villager", "mob", "militia", "cat"]
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/recruit_loot.json"
+      },
+      "minecraft:home": {
+        "restriction_radius": 128
+      },
+      "minecraft:behavior.go_home":{
+        "priority": 5,
+        "goal_radius": 1.50,
+        "interval": 60,
+        "speed_multiplier": 1.15
+    },
+    "minecraft:behavior.random_look_around": {
+      "look_distance": 16,
+      "look_time": [2,4],
+      "priority": 8,
+      "probability": 0.01
+    },
+    "minecraft:breathable": {
+      "total_supply": 15,
+      "suffocate_time": 0
+    },
+    "minecraft:health": {
+      "value": 20,
+      "max": 20
+    },
+    "minecraft:hurt_on_condition": {
+      "damage_conditions": [
+        {
+          "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+          "cause": "lava",
+          "damage_per_tick": 4
+        }
+      ]
+    },
+      "minecraft:collision_box": {
+        "height": 1.8,
+        "width": 0.6
+      },
+      "minecraft:inventory":{
+        "additional_slots_per_strength": 0,
+        "can_be_siphoned_from": false,
+        "inventory_size": 5,
+        "private": false,
+        "restrict_to_owner": false
+    },
+      "minecraft:equipment":{
+      "table": "loot_tables/entities/recruit_gear.json"
+  },
+      "minecraft:equip_item": {},
+      "minecraft:annotation.open_door": {},
+      "minecraft:movement": {
+        "value": 0.5
+      },
+      "minecraft:navigation.walk": {
+        "is_amphibious": true,
+        "can_path_over_water": true,
+        "can_pass_doors": true,
+        "can_open_doors": true,
+        "can_walk": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": true,
+        "search_range": 128,
+        "search_height": 8
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:nameable": {
+        "allow_name_tag_renaming": true,
+        "always_show": false
+      },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": true
+      },
+      "minecraft:persistent": {},
+      
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "fall",
+          "deals_damage": true
+        }
+      },
+      "minecraft:attack": {
+        "damage": 2
+      },
+      "minecraft:behavior.melee_attack": {
+        "priority": 1,
+        "track_target": true
+      },
+      "minecraft:behavior.move_towards_target": {
+        "priority": 2,
+        "speed_multiplier": 1,
+        "within_radius": 16
+      },
+      "minecraft:behavior.float": {
+        "priority": 4
+    },
+      "minecraft:behavior.move_to_land": {
+        "priority": 4,
+        "search_range": 16,
+        "search_height": 16,
+        "goal_radius": 0,
+        "search_count": 10
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 3,
+        "must_reach": true,
+        "must_see": true,
+        "entity_types": [
+           {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "monster"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "operator": "!=",
+                  "value": "creeper"
+                },
+                {
+                  "test": "in_water",
+                  "subject": "other",
+                  "operator": "!="
+              }
+              ]
+            },
+            "within_default": 10
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "hoglin"
+                },
+                {
+                  "test": "is_difficulty",
+                  "operator": "!=",
+                  "value": "peaceful"
+                },
+                {
+                  "test": "in_water",
+                  "subject": "other",
+                  "operator": "!="
+              }
+              ]
+            },
+            "max_dist": 16
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "zoglin"
+                },
+                {
+                  "test": "is_difficulty",
+                  "operator": "!=",
+                  "value": "peaceful"
+                },
+                {
+                  "test": "in_water",
+                  "subject": "other",
+                  "operator": "!="
+              }
+              ]
+            },
+            "max_dist": 16
+          }
+        ]
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 2,
+        "alert_same_type": true,
+        "entity_types": {
+          "filters":{
+            "all_of": [
+              {
+              "test": "is_family",
+              "subject": "other",
+              "operator": "!=",
+              "value": "creeper"
+              },
+              {
+              "test": "is_family",
+              "subject": "other",
+              "operator": "!=",
+              "value": "militia"
+              },
+              {
+                "test": "is_family",
+                "subject": "other",
+                "operator": "!=",
+                "value": "player"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

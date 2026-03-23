@@ -1,0 +1,57 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "projectmoat:recruit",
+      "materials": {
+        "default": "zombie"
+      },
+      "textures": {
+        "default": "textures/entity/recruit/recruit"
+      },
+      "geometry": {
+        "default": "geometry.recruit"
+      },
+      "scripts": {
+        "scale": "0.9375"
+      },
+      "animations": {
+        "general": "animation.villager.general",
+        "move": "animation.villager.move",
+        "holding": "animation.humanoid.holding",
+        "charging": "animation.humanoid.charging",
+        "attack.rotations": "animation.humanoid.attack.rotations",
+        "damage_nearby_mobs": "animation.humanoid.damage_nearby_mobs",
+        "bow_and_arrow": "animation.humanoid.bow_and_arrow"
+      },
+      "animation_controllers": [
+        {
+          "move": "controller.animation.humanoid.move"
+        },
+        {
+          "holding": "controller.animation.humanoid.holding"
+        },
+        {
+          "charging": "controller.animation.humanoid.charging"
+        },
+        {
+          "attack": "controller.animation.humanoid.attack"
+        },
+        {
+          "damage_nearby_mobs": "controller.animation.humanoid.damage_nearby_mobs"
+        },
+        {
+          "bow_and_arrow": "controller.animation.humanoid.bow_and_arrow"
+        }
+      ],
+      "render_controllers":
+        [
+          "controller.render.zombie"],
+      "enable_attachables": true,
+      "spawn_egg": {
+        "base_color": "#1890c9",
+        "overlay_color": "#0319e1"
+      }
+    }
+  }
+}
