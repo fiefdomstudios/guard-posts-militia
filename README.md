@@ -1,0 +1,1 @@
+Free version of Guard Posts - two new blocks that each spawn a new entity.  Entities remain at their posts scanning for hostile mobs, engage, and return to their posts.  No healing or upgrades in this free version.
