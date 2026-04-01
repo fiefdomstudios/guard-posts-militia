@@ -1,8 +1,0 @@
-pack.name=Militia for Minecraft	###Militia is an amateur military force called into service at need.
-pack.description=Defend the walls!  Adds town militia/castle guards to your Minecraft world - assign them to posts.	###Posts are the spots where guards carry out their duties.
-author.name=Created by Fiefdom Studios, LLC	###Fiefdom Studios, LLC is a company name.entity.projectmoat:recruit.name=Recruit	###A recruit is an entry-level soldier with limited training.
-entity.projectmoat:hunter.name=Hunter	###A hunter is an entity that is armed with a bow and arrows.
-item.spawn_egg.entity.projectmoat:recruit.name=Spawn Recruit	###A recruit is an entry-level soldier with limited training.
-item.spawn_egg.entity.projectmoat:hunter.name=Spawn Hunter	###A hunter is an entity that is armed with a bow and arrows.
-tile.projectmoat:guardpost.name=Guard Post	###A post is a spot where guards carry out their duties.
-tile.projectmoat:archerpost.name=Archer Post	###A post is a spot where guards carry out their duties.  An archer is an entity armed with a bow and arrows.
