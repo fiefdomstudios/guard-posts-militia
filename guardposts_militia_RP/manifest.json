@@ -1,0 +1,18 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Militia for Minecraft",
+		"description": "Defend the walls!  Adds town militia/castle guards to your Minecraft world - assign them to posts. v1.1",
+		"uuid": "537694a2-c59f-4788-8fd7-119f1a3bb58e",
+		"version": [1, 1, 0],
+		"min_engine_version": [1,16,0]
+	},
+	"modules": [
+		{
+			"description": "Resource Pack for Guard Posts for Minecraft - Militia Edition",
+			"type": "resources",
+			"uuid": "6b3189d0-4fb5-4252-bf39-681cb9e62bda",
+			"version": [1, 1, 0]
+		}
+	]
+}

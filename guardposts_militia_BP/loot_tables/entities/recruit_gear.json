@@ -1,0 +1,49 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "item",
+            "name": "minecraft:wooden_sword"
+          }
+            ]
+          },
+        {
+          "rolls": 1,
+          "entries": [
+            {
+              "type":"item",
+              "name": "minecraft:leather_helmet"
+            }
+          ]
+        },
+        {
+          "rolls": 1,
+          "entries": [
+            {
+              "type":"item",
+              "name": "minecraft:leather_chestplate"
+            }
+          ]
+        },
+        {
+          "rolls": 1,
+          "entries": [
+            {
+              "type":"item",
+              "name": "minecraft:leather_leggings"
+            }
+          ]
+        },
+        {
+          "rolls": 1,
+          "entries": [
+            {
+              "type":"item",
+              "name": "minecraft:leather_boots"
+            }
+          ]
+        }
+      ]
+      }
